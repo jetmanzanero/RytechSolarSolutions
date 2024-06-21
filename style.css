@@ -1,0 +1,106 @@
+body {
+    padding-top: 3rem;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+  }  
+  ul{
+    list-style-type: none;
+
+  }
+  li{
+    margin-bottom: 5px;
+  }
+  .navbar {
+    background-color: #007bff;
+  }
+  .navbar-brand, .navbar-nav .nav-link {
+    color: #fff;
+  }
+  .jumbotron {
+    background: url('solar\ 1600x600.jpg') center/cover no-repeat;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin: 0;
+  }
+section{
+    padding: 60px 20px;
+}
+section:nth-child(odd){
+    background-color: #fff;
+}
+section:nth-child(even){
+    background-color: #f6f6f6;
+}
+.logo {
+    color: #007bff;
+    font-size: 200px;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+  }
+  .fa {
+    color: #007bff;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
