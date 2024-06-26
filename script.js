@@ -71,3 +71,64 @@ function signUp() {
   document.getElementById("signUp").innerHTML = signin.html;
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Extract data from the table
+  const consumerTypes = ['HIGH VOLTAGE', 'LOW VOLTAGE', 'RESIDENTIAL'];
+  const totalRates = [7.3145, 8.3837, 9.2597];
+
+  // Create chart
+  var ctx = document.getElementById('powerRatesChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: consumerTypes,
+      datasets: [{
+        label: 'Total Rate Per KWH (Php)',
+        data: totalRates,
+        backgroundColor: [
+          'rgba(54, 162, 235, 0.7)', // Blue
+          'rgba(255, 99, 132, 0.7)', // Red
+          'rgba(255, 206, 86, 0.7)' // Yellow
+        ],
+        borderColor: [
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 99, 132, 1)',
+          'rgba(255, 206, 86, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        x: {
+          grid: {
+            display: false
+          }
+        },
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Total Rate Per KWH (Php)',
+            font: {
+              size: 14
+            }
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top'
+        },
+        tooltip: {
+          callbacks: {
+            label: function(tooltipItem) {
+              return tooltipItem.dataset.label + ': ' + tooltipItem.raw.toFixed(4);
+            }
+          }
+        }
+      }
+    }
+  });
+});

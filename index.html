@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rytech Solar Solutions offers clean, renewable solar energy solutions tailored for homeowners.">
+    <meta name="keywords" content="Solar Energy, Renewable Energy, Solar Panel Installation, Clean Energy, Rytech Solar Solutions">
+    <meta property="og:image" content="path/to/social-preview-image.jpg">
+
     <title>Rytech Solar Solutions</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand" href="#myPage">Rytech Solar Solutions</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,49 +89,147 @@
         </div>
     </section>
 
+    <section id="power-rate" class="container-fluid">
+      <div class="container">
+          <h2 class="text-center">Power Rates</h2>
+          <div class="row">
+              <div class="col-sm-8">
+                  <div class="table-wrapper">
+                      <table class="table-power-rates strippled">
+                          <thead class="thead-dark">
+                              <tr>
+                                  <th colspan="4" style="text-align: center;">June 2024</th>
+                              </tr>
+                              <tr>
+                                  <th>Consumer Type</th>
+                                  <th style="width: 45%;" colspan="2">Total Rate Per KWH(Php)</th>
+                                  <th>Generation Rate</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>HIGH VOLTAGE</td>
+                                  <td>7.3145</td>
+                                  <td><a href="">Open</a></td>
+                                  <td>5.2252</td>
+                              </tr>
+                              <tr>
+                                  <td>LOW VOLTAGE</td>
+                                  <td>8.3837</td>
+                                  <td><a href="">Open</a></td>
+                                  <td>5.2252</td>
+                              </tr>
+                              <tr>
+                                  <td>RESIDENTIAL</td>
+                                  <td>9.2597</td>
+                                  <td><a href="">Open</a></td>
+                                  <td>5.2252</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="chart-container">
+                    <canvas id="powerRatesChart"></canvas>
+                </div>
+            </div>
+
+          </div>
+          <div class="mt-4">
+              <p class="mb-0">Notes:</p>
+              <ul>
+                  <li>Rates are subject to change. Check back for updates</li>
+                  <li>For detailed rate information or inquiries, Please contact customer service</li>
+              </ul>
+          </div>
+      </div>
+  </section>
+  
     <section id="services" class="container-fluid my-5">
-        <div class="container">
-            <h2 class="text-center">Our Services</h2>
-            <p style="margin-bottom: 30px;"><em>Rytech Solar Solutions offers residential solar electricity services, providing clean 
-                and renewable energy solutions tailored to meet the needs of homeowners.</p></em>
-            
-                <div class="row slideanim">
-                    <div class="col-md-4">
-                      <div class="card">
-                        <div class="card-body">
+      <div class="container">
+          <h2 class="text-center">Our Services</h2>
+          <p style="margin-bottom: 30px;"><em>Rytech Solar Solutions offers residential solar electricity services, providing clean 
+              and renewable energy solutions tailored to meet the needs of homeowners.</em></p>
+          
+          <div class="row slideanim">
+              <div class="col-md-4">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <i class="fas fa-solar-panel fa-3x mb-3"></i>
                           <h5 class="card-title">Residential Solar Electricity</h5>
                           <p class="card-text">Provide clean and renewable solar-generated electricity to households.</p>
-                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card">
-                        <div class="card-body">
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <i class="fas fa-tools fa-3x mb-3"></i>
                           <h5 class="card-title">Solar Panel Installation</h5>
                           <p class="card-text">Customize and install solar systems for residential use.</p>
-                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card">
-                        <div class="card-body">
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <i class="fas fa-cogs fa-3x mb-3"></i>
                           <h5 class="card-title">Maintenance and Support</h5>
                           <p class="card-text">Offer routine maintenance and customer support for optimal system performance.</p>
-                        </div>
                       </div>
-                    </div>
                   </div>
-                  <h2 class="mb-4" style="padding-top: 30px;">Why Choose Rytech?</h2>
-            <ul>
-                <li>We use advanced solar technology to ensure optimal energy production.</li>
-                <li>Our focus on community allows us to provide personalized service and support.</li>
-                <li>We guarantee reliable and consistent energy supply to our customers.</li>
-                <li>We are committed to innovation, continuously improving our services and offerings.</li>
-            </ul>
+              </div>
+          </div>
+          <h2 class="mb-4" style="padding-top: 30px;">Why Choose Rytech?</h2>
+          <ul class="ul-items">
+              <li><i class="fas fa-check"></i> We use advanced solar technology to ensure optimal energy production.</li>
+              <li><i class="fas fa-check"></i> Our focus on community allows us to provide personalized service and support.</li>
+              <li><i class="fas fa-check"></i> We guarantee reliable and consistent energy supply to our customers.</li>
+              <li><i class="fas fa-check"></i> We are committed to innovation, continuously improving our services and offerings.</li>
+          </ul>
         </div>
-    </section>
+  </section>
 
-      <section id="contact" class="my-5">
+  <section id="blog" class="container-fluid my-5">
+    <h2 class="text-center">Latest News</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="solar 600x400.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Understanding Solar Energy</h5>
+            <p class="card-text">Learn how solar energy works and why it's becoming a popular choice for homeowners.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="solar 1600x600.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Benefits of Solar Panels</h5>
+            <p class="card-text">Discover the many benefits of installing solar panels at your home.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="solar 600x400.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">How to Maintain Your Solar System</h5>
+            <p class="card-text">Keep your solar system running efficiently with these maintenance tips.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+     <section id="contact" class="my-5">
         <h2 class="text-center mb-5">Contact Us</h2>
         <div class="row slideanim">
           <div class="col-md-6 mx-auto">
