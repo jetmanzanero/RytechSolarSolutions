@@ -50,6 +50,7 @@ section:nth-child(even){
   }
 .table-power-rates{
   border-collapse: collapse;
+  margin: 0 auto;
 }
 .table-power-rates th, td{
   border: 1px solid #ccc;
